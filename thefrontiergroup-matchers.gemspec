@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TheFrontierGroup::Matchers::VERSION
   spec.authors       = ["Rebecca Skinner"]
   spec.email         = ["becky@thefrontiergroup.com.au"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{A collection of rspec matchers used by TFG projects.}
+  spec.description   = %q{A collection of rspec matchers used by TFG projects.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+
+  spec.add_dependency "rspec", "> 2.14"
 end
