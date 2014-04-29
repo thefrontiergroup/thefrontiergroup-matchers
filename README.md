@@ -1,6 +1,6 @@
-# Thefrontiergroup::Matchers
+# The Frontier Group: Matchers
 
-TODO: Write a gem description
+A collection of Rspec matchers to share across TFG projects.
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply use the matchers present inside your Rspec tests.
+
+eg. `it { should set_flash(:notice) }`
 
 ## Contributing
 
