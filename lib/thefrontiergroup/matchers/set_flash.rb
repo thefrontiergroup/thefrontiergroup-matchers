@@ -4,10 +4,10 @@ RSpec::Matchers.define :set_flash do |flash_type|
   end
 
   match do |response|
-    if @message.present?
-      flash[flash_type] == @message
+    if @message.nil?
+      !flash[flash_type].nil?
     else
-      flash[flash_type].present?
+      @message === flash[flash_type]
     end
   end
 
@@ -16,18 +16,18 @@ RSpec::Matchers.define :set_flash do |flash_type|
   end
 
   failure_message_for_should do
-    if @message.present?
-      "expected flash[:#{flash_type}] to be #{@message}, got #{flash[flash_type]}"
-    else
+    if @message.nil?
       "expected flash[:#{flash_type}] to be set"
+    else
+      "expected flash[:#{flash_type}] to be #{@message}, got #{flash[flash_type].to_s}"
     end
   end
 
   failure_message_for_should_not do
-    if @message.present?
-      "expected flash[:#{flash_type}] not to be #{@message}"
-    else
+    if @message.nil?
       "expected flash[:#{flash_type}] not to be set"
+    else
+      "expected flash[:#{flash_type}] not to be #{@message}"
     end
   end
 end
