@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["becky@thefrontiergroup.com.au"]
   spec.summary       = %q{A collection of rspec matchers used by TFG projects.}
   spec.description   = %q{A collection of rspec matchers used by TFG projects.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/thefrontiergroup/thefrontiergroup-matchers/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
