@@ -16,11 +16,27 @@ Or install it yourself as:
 
     $ gem install thefrontiergroup-matchers
 
-## Usage
+## Existing matchers
 
-Simply use the matchers present inside your Rspec tests.
+### Flash Messages
 
-eg. `it { should set_flash(:notice) }`
+```ruby
+it { should set_flash(:notice) }
+it { should set_flash(:alert).to('foobar') }
+it { should_not set_flash(:notice).to(/not/) }
+```
+
+### Pagination (based on gem [kaminari](https://github.com/amatsuda/kaminari))
+
+```ruby
+specify { expect(users).to be_paginated }
+```
+
+### Order
+
+```ruby
+it { should order(archived_user).after(unarchived_user) }
+```
 
 ## Contributing
 

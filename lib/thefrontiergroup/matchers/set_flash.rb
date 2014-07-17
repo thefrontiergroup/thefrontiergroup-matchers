@@ -15,7 +15,7 @@ RSpec::Matchers.define :set_flash do |flash_type|
     "set flash[:#{flash_type}] to #{@message}"
   end
 
-  failure_message_for_should do
+  failure_message do
     if @message.nil?
       "expected flash[:#{flash_type}] to be set"
     else
@@ -23,7 +23,7 @@ RSpec::Matchers.define :set_flash do |flash_type|
     end
   end
 
-  failure_message_for_should_not do
+  failure_message_when_negated do
     if @message.nil?
       "expected flash[:#{flash_type}] not to be set"
     else
