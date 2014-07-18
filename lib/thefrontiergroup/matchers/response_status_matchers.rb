@@ -1,11 +1,4 @@
-[
-  [ "bad_request", 400 ],
-  [ "forbidden", 403 ],
-  [ "not_found", 404 ],
-  [ "unauthorised", 401 ],
-  [ "unprocessable_entity", 422 ]
-].each do |name, status|
-
+def define_status_code_matcher(name, status)
   RSpec::Matchers.define "be_#{name}" do
     match do
       subject
@@ -24,4 +17,14 @@
       "expected HTTP status code not to be #{status}"
     end
   end
+end
+
+[
+  [ "bad_request", 400 ],
+  [ "forbidden", 403 ],
+  [ "not_found", 404 ],
+  [ "unauthorised", 401 ],
+  [ "unprocessable_entity", 422 ]
+].each do |name, status|
+  define_status_code_matcher(name, status)
 end
