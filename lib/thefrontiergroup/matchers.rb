@@ -1,4 +1,5 @@
+require "thefrontiergroup/matchers/be_paginated"
+require "thefrontiergroup/matchers/order"
+require "thefrontiergroup/matchers/response_status_matchers"
+require "thefrontiergroup/matchers/set_flash"
 require "thefrontiergroup/matchers/version"
-require 'thefrontiergroup/matchers/set_flash'
-require 'thefrontiergroup/matchers/be_paginated'
-require 'thefrontiergroup/matchers/order'
