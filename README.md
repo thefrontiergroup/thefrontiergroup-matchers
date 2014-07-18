@@ -38,6 +38,16 @@ specify { expect(users).to be_paginated }
 it { should order(archived_user).after(unarchived_user) }
 ```
 
+### Response Status
+
+```ruby
+it { should be_bad_request }
+it { should be_forbidden }
+it { should be_not_found }
+it { should be_unauthorised }
+it { should be_unprocessable_entity }
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/thefrontiergroup-matchers/fork )
