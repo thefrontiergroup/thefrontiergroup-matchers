@@ -7,7 +7,8 @@ require 'ostruct'
   [ "be_forbidden", 403 ],
   [ "be_not_found", 404 ],
   [ "be_unauthorised", 401 ],
-  [ "be_unprocessable_entity", 422 ]
+  [ "be_unprocessable_entity", 422 ],
+  [ "be_internal_server_error", 500 ]
 ].each do |matcher, status|
 
   describe "#{matcher} matcher" do
