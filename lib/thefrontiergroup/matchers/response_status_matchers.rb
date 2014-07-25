@@ -24,7 +24,8 @@ end
   [ "forbidden", 403 ],
   [ "not_found", 404 ],
   [ "unauthorised", 401 ],
-  [ "unprocessable_entity", 422 ]
+  [ "unprocessable_entity", 422 ],
+  [ "internal_server_error", 500 ]
 ].each do |name, status|
   define_status_code_matcher(name, status)
 end

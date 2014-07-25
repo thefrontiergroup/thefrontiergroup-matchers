@@ -46,6 +46,7 @@ it { should be_forbidden }
 it { should be_not_found }
 it { should be_unauthorised }
 it { should be_unprocessable_entity }
+it { should be_internal_server_error }
 ```
 
 ## Contributing
