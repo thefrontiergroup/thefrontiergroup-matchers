@@ -6,7 +6,7 @@ A collection of Rspec matchers to share across TFG projects.
 
 Add this line to your application's Gemfile:
 
-    gem 'thefrontiergroup-matchers'
+    gem 'thefrontiergroup-matchers', git: 'git@github.com:thefrontiergroup/thefrontiergroup-matchers.git'
 
 And then execute:
 
