@@ -5,7 +5,8 @@ RSpec::Matchers.define :set_flash do |flash_type|
 
   match do |response|
     if @message.nil?
-      flash.key? flash_type
+      method = flash.respond_to?(:key?) ? :key? : :has_key?
+      flash.send(method, flash_type)
     else
       @message === flash[flash_type]
     end
