@@ -24,11 +24,11 @@ RSpec::Matchers.define :order do |origin|
     "be in the correct order"
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     "expected\n'#{origin.inspect}'\n to be after:\n'#{@after.inspect}'\n in:\n'#{actual.inspect}'"
   end
 
-  failure_message_for_should_not do |actual|
+  failure_message_when_negated do |actual|
     "expected\n'#{origin.inspect}'\n to be before:\n'#{@after.inspect}'\n in:\n'#{actual.inspect}'"
   end
 end

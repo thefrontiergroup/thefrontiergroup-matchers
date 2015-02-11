@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-mocks', '> 2.14'
   spec.add_development_dependency 'byebug'
 
-  spec.add_dependency "rspec", "> 2.14"
+  spec.add_dependency "rspec", "~> 3.0.0"
 end

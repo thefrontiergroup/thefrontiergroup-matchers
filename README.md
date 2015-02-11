@@ -21,9 +21,9 @@ Or install it yourself as:
 ### Flash Messages
 
 ```ruby
-it { should set_flash(:notice) }
-it { should set_flash(:alert).to('foobar') }
-it { should_not set_flash(:notice).to(/not/) }
+it { is_expected.to set_flash(:notice) }
+it { is_expected.to set_flash(:alert).to('foobar') }
+it { is_expected.not_to set_flash(:notice).to(/not/) }
 ```
 
 ### Pagination (based on gem [kaminari](https://github.com/amatsuda/kaminari))
@@ -35,18 +35,18 @@ specify { expect(users).to be_paginated }
 ### Order
 
 ```ruby
-it { should order(archived_user).after(unarchived_user) }
+it { is_expected.to order(archived_user).after(unarchived_user) }
 ```
 
 ### Response Status
 
 ```ruby
-it { should be_bad_request }
-it { should be_forbidden }
-it { should be_not_found }
-it { should be_unauthorised }
-it { should be_unprocessable_entity }
-it { should be_internal_server_error }
+it { is_expected.to be_bad_request }
+it { is_expected.to be_forbidden }
+it { is_expected.to be_not_found }
+it { is_expected.to be_unauthorised }
+it { is_expected.to be_unprocessable_entity }
+it { is_expected.to be_internal_server_error }
 ```
 
 ## Contributing
