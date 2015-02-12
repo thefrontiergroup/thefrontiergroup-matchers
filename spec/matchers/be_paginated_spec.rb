@@ -22,11 +22,11 @@ describe 'be_paginated matcher' do
 
   context "when resource responds to pagination methods" do
     let(:resource) { PaginatedUser }
-    it { should be_paginated }
+    it { is_expected.to be_paginated }
   end
 
   context "when resource does not respond to pagination methods" do
     let(:resource) { NonPaginatedUser }
-    it { should_not be_paginated }
+    it { is_expected.not_to be_paginated }
   end
 end

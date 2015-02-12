@@ -9,8 +9,8 @@ describe 'order matcher' do
   let(:second_element) { 'B' }
   let(:third_element) { 'C' }
 
-  it { should order(second_element).after(first_element) }
-  it { should_not order(first_element).after(second_element) }
-  it { should order(third_element).after(first_element) }
-  it { should order(third_element).after(second_element) }
+  it { is_expected.to order(second_element).after(first_element) }
+  it { is_expected.not_to order(first_element).after(second_element) }
+  it { is_expected.to order(third_element).after(first_element) }
+  it { is_expected.to order(third_element).after(second_element) }
 end
