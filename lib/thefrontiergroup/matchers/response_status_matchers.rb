@@ -9,11 +9,11 @@ def define_status_code_matcher(name, status)
       "have the HTTP status code #{status}"
     end
 
-    failure_message_for_should do |actual|
+    failure_message do |actual|
       "expected HTTP status code to be #{status} but was #{actual.status}"
     end
 
-    failure_message_for_should_not do
+    failure_message_when_negated do
       "expected HTTP status code not to be #{status}"
     end
   end

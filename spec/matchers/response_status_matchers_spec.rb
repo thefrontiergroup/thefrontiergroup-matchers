@@ -16,16 +16,16 @@ require 'ostruct'
     let(:request) { double }
     let(:response) { OpenStruct.new(status: returned_status) }
 
-    before { request.stub(:status) }
+    before { allow(request).to receive(:status) }
 
     context "when response status is #{status}" do
       let(:returned_status) { status }
-      it { should eval(matcher) }
+      it { is_expected.to eval(matcher) }
     end
 
     context "when response status is not #{status}" do
       let(:returned_status) { 123 }
-      it { should_not eval(matcher) }
+      it { is_expected.not_to eval(matcher) }
     end
   end
 end
